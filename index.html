@@ -5,114 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Vertax Agency — Meta Ads | Google Ads | SEO</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;}
-  :root{
-    --cream:#F5EFE6;
-    --cream2:#EDE0CC;
-    --cream3:#D9C9B0;
-    --yellow:#F5C842;
-    --yellow-dark:#C99D0A;
-    --yellow-light:#FDF3C0;
-    --black:#1A1510;
-    --dark:#2E2A22;
-    --muted:#6B5E4A;
-    --white:#FFFDF7;
-  }
-  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--black);line-height:1.7;}
-  a{text-decoration:none;color:inherit;}
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --cream:#F5EFE6;--cream2:#EDE0CC;--cream3:#D9C9B0;
+  --yellow:#F5C842;--yellow-dark:#C99D0A;--yellow-light:#FDF3C0;
+  --black:#1A1510;--dark:#2E2A22;--muted:#6B5E4A;--white:#FFFDF7;
+}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--black);line-height:1.7;}
+a{text-decoration:none;color:inherit;}
 
-  /* NAV */
-  nav{background:var(--white);border-bottom:1px solid var(--cream2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:99;}
-  .logo{font-size:22px;font-weight:700;letter-spacing:-0.5px;color:var(--black);}
-  .logo span{color:var(--yellow-dark);}
-  .nav-cta{background:var(--yellow);color:var(--black);font-weight:600;font-size:14px;padding:9px 20px;border-radius:8px;border:none;cursor:pointer;transition:background .2s;}
-  .nav-cta:hover{background:var(--yellow-dark);color:#fff;}
+nav{background:var(--white);border-bottom:1px solid var(--cream2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:99;}
+.logo{font-size:22px;font-weight:700;letter-spacing:-0.5px;color:var(--black);}
+.logo span{color:var(--yellow-dark);}
+.nav-cta{background:var(--yellow);color:var(--black);font-weight:600;font-size:14px;padding:9px 20px;border-radius:8px;border:none;cursor:pointer;transition:background .2s;}
+.nav-cta:hover{background:var(--yellow-dark);color:#fff;}
 
-  /* HERO */
-  .hero{background:var(--white);padding:90px 5% 80px;text-align:center;}
-  .hero-badge{display:inline-block;background:var(--yellow-light);color:var(--yellow-dark);font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:24px;border:1px solid #E8D070;}
-  .hero h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.15;color:var(--black);max-width:780px;margin:0 auto 20px;}
-  .hero h1 span{color:var(--yellow-dark);}
-  .hero p{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 36px;}
-  .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  .btn-primary{background:var(--yellow);color:var(--black);font-weight:700;font-size:16px;padding:15px 32px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;}
-  .btn-primary:hover{background:var(--yellow-dark);color:#fff;transform:translateY(-1px);}
-  .btn-secondary{background:transparent;color:var(--dark);font-weight:600;font-size:16px;padding:15px 32px;border-radius:10px;border:1.5px solid var(--cream3);cursor:pointer;transition:all .2s;}
-  .btn-secondary:hover{border-color:var(--yellow-dark);color:var(--yellow-dark);}
-  .hero-sub{margin-top:28px;font-size:13px;color:var(--muted);}
-  .hero-sub span{color:var(--yellow-dark);font-weight:600;}
+.hero{background:var(--white);padding:90px 5% 80px;text-align:center;}
+.hero-badge{display:inline-block;background:var(--yellow-light);color:var(--yellow-dark);font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:24px;border:1px solid #E8D070;}
+.hero h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.15;color:var(--black);max-width:780px;margin:0 auto 20px;}
+.hero h1 span{color:var(--yellow-dark);}
+.hero p{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 36px;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--yellow);color:var(--black);font-weight:700;font-size:16px;padding:15px 32px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;}
+.btn-primary:hover{background:var(--yellow-dark);color:#fff;transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--dark);font-weight:600;font-size:16px;padding:15px 32px;border-radius:10px;border:1.5px solid var(--cream3);cursor:pointer;transition:all .2s;}
+.btn-secondary:hover{border-color:var(--yellow-dark);color:var(--yellow-dark);}
+.hero-sub{margin-top:28px;font-size:13px;color:var(--muted);}
+.hero-sub span{color:var(--yellow-dark);font-weight:600;}
 
-  /* PROBLEM */
-  .problem{background:var(--dark);color:#fff;padding:70px 5%;text-align:center;}
-  .problem h2{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:16px;line-height:1.3;}
-  .problem h2 em{color:var(--yellow);font-style:normal;}
-  .problem p{font-size:17px;color:#B5A898;max-width:620px;margin:0 auto 40px;}
-  .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:800px;margin:0 auto;}
-  .problem-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px 20px;text-align:left;}
-  .problem-card .icon{font-size:22px;margin-bottom:12px;}
-  .problem-card h4{font-size:15px;font-weight:600;margin-bottom:6px;color:#fff;}
-  .problem-card p{font-size:13px;color:#8A7B6E;line-height:1.6;}
+.problem{background:var(--dark);color:#fff;padding:70px 5%;text-align:center;}
+.problem h2{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:16px;line-height:1.3;}
+.problem h2 em{color:var(--yellow);font-style:normal;}
+.problem p{font-size:17px;color:#B5A898;max-width:620px;margin:0 auto 40px;}
+.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:800px;margin:0 auto;}
+.problem-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px 20px;text-align:left;}
+.problem-card .icon{font-size:22px;margin-bottom:12px;}
+.problem-card h4{font-size:15px;font-weight:600;margin-bottom:6px;color:#fff;}
+.problem-card p{font-size:13px;color:#8A7B6E;line-height:1.6;}
 
-  /* SERVICES */
-  .services{background:var(--cream);padding:80px 5%;text-align:center;}
-  .section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--yellow-dark);text-transform:uppercase;margin-bottom:12px;}
-  .section-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:14px;color:var(--black);}
-  .section-sub{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 50px;}
-  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:0 auto;}
-  .service-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 24px;text-align:left;transition:all .2s;}
-  .service-card:hover{border-color:var(--yellow);transform:translateY(-3px);}
-  .service-icon{width:48px;height:48px;background:var(--yellow-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:22px;}
-  .service-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--black);}
-  .service-card p{font-size:14px;color:var(--muted);line-height:1.7;}
-  .service-tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--yellow-dark);background:var(--yellow-light);padding:4px 10px;border-radius:6px;}
+.services{background:var(--cream);padding:80px 5%;text-align:center;}
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--yellow-dark);text-transform:uppercase;margin-bottom:12px;}
+.section-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:14px;color:var(--black);}
+.section-sub{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 50px;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:0 auto;}
+.service-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 24px;text-align:left;transition:all .2s;}
+.service-card:hover{border-color:var(--yellow);transform:translateY(-3px);}
+.service-icon{width:48px;height:48px;background:var(--yellow-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:22px;}
+.service-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--black);}
+.service-card p{font-size:14px;color:var(--muted);line-height:1.7;}
+.service-tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--yellow-dark);background:var(--yellow-light);padding:4px 10px;border-radius:6px;}
 
-  /* HOW IT WORKS */
-  .how{background:var(--white);padding:80px 5%;text-align:center;}
-  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;max-width:780px;margin:0 auto;position:relative;}
-  .step{padding:24px 20px;position:relative;}
-  .step-num{width:44px;height:44px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin:0 auto 16px;color:var(--black);}
-  .step h4{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--black);}
-  .step p{font-size:14px;color:var(--muted);}
-  .step-line{display:none;}
+.how{background:var(--white);padding:80px 5%;text-align:center;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;max-width:780px;margin:0 auto;}
+.step{padding:24px 20px;}
+.step-num{width:44px;height:44px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin:0 auto 16px;color:var(--black);}
+.step h4{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--black);}
+.step p{font-size:14px;color:var(--muted);}
 
-  /* WHO WE HELP */
-  .who{background:var(--cream);padding:80px 5%;text-align:center;}
-  .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:780px;margin:0 auto;}
-  .who-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 28px;text-align:left;}
-  .who-card .big-icon{font-size:36px;margin-bottom:16px;}
-  .who-card h3{font-size:20px;font-weight:700;margin-bottom:10px;color:var(--black);}
-  .who-card p{font-size:14px;color:var(--muted);line-height:1.7;}
-  .who-card ul{margin-top:14px;padding-left:18px;}
-  .who-card ul li{font-size:14px;color:var(--muted);margin-bottom:6px;}
+.who{background:var(--cream);padding:80px 5%;text-align:center;}
+.who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:780px;margin:0 auto;}
+.who-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 28px;text-align:left;}
+.who-card .big-icon{font-size:36px;margin-bottom:16px;}
+.who-card h3{font-size:20px;font-weight:700;margin-bottom:10px;color:var(--black);}
+.who-card p{font-size:14px;color:var(--muted);line-height:1.7;}
+.who-card ul{margin-top:14px;padding-left:18px;}
+.who-card ul li{font-size:14px;color:var(--muted);margin-bottom:6px;}
 
-  /* CTA SECTION */
-  .cta-section{background:var(--dark);padding:90px 5%;text-align:center;position:relative;overflow:hidden;}
-  .cta-section::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:var(--yellow);opacity:0.06;border-radius:50%;}
-  .cta-section h2{font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;max-width:620px;margin:0 auto 16px;line-height:1.2;}
-  .cta-section h2 span{color:var(--yellow);}
-  .cta-section p{font-size:17px;color:#9A8C7E;max-width:500px;margin:0 auto 36px;}
-  .cta-form{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px 32px;max-width:500px;margin:0 auto;}
-  .form-row{display:flex;flex-direction:column;gap:14px;margin-bottom:14px;}
-  .form-row input,.form-row select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:13px 16px;color:#fff;font-size:15px;outline:none;transition:border .2s;}
-  .form-row input::placeholder{color:#7A6E65;}
-  .form-row input:focus,.form-row select:focus{border-color:var(--yellow);}
-  .form-row select{color:#7A6E65;}
-  .form-row select option{background:#2E2A22;color:#fff;}
-  .submit-btn{width:100%;background:var(--yellow);color:var(--black);font-weight:700;font-size:17px;padding:16px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;margin-top:6px;}
-  .submit-btn:hover{background:#FFD700;transform:translateY(-1px);}
-  .cta-note{margin-top:14px;font-size:13px;color:#7A6E65;}
+.cta-section{background:var(--dark);padding:90px 5%;text-align:center;position:relative;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:var(--yellow);opacity:0.06;border-radius:50%;}
+.cta-section h2{font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;max-width:620px;margin:0 auto 16px;line-height:1.2;}
+.cta-section h2 span{color:var(--yellow);}
+.cta-section>p{font-size:17px;color:#9A8C7E;max-width:500px;margin:0 auto 36px;}
+.cta-form{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px 32px;max-width:500px;margin:0 auto;}
+.form-row{display:flex;flex-direction:column;gap:14px;margin-bottom:14px;}
+.form-row input,.form-row select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:13px 16px;color:#fff;font-size:15px;outline:none;transition:border .2s;width:100%;}
+.form-row input::placeholder{color:#7A6E65;}
+.form-row input:focus,.form-row select:focus{border-color:var(--yellow);}
+.form-row select{color:#ccc;}
+.form-row select option{background:#2E2A22;color:#fff;}
+.submit-btn{width:100%;background:var(--yellow);color:var(--black);font-weight:700;font-size:17px;padding:16px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;margin-top:6px;}
+.submit-btn:hover{background:#FFD700;transform:translateY(-1px);}
+.submit-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+.cta-note{margin-top:14px;font-size:13px;color:#7A6E65;}
+.form-msg{margin-top:14px;font-size:14px;font-weight:600;padding:10px;border-radius:8px;display:none;}
+.form-msg.success{background:rgba(29,158,117,0.15);color:#5DCAA5;display:block;}
+.form-msg.error{background:rgba(226,75,74,0.15);color:#F09595;display:block;}
 
-  /* FOOTER */
-  footer{background:#111009;color:#6B5E4A;padding:36px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:16px;}
-  .footer-logo{font-size:18px;font-weight:700;color:#fff;}
-  .footer-logo span{color:var(--yellow);}
-  .footer-links{display:flex;gap:20px;font-size:13px;}
-  .footer-links a{color:#6B5E4A;transition:color .2s;}
-  .footer-links a:hover{color:var(--yellow);}
-  .footer-copy{font-size:12px;}
+/* FOOTER */
+footer{background:#111009;padding:60px 5% 30px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+@media(max-width:680px){.footer-top{grid-template-columns:1fr;gap:32px;}}
+.footer-brand .logo{font-size:24px;font-weight:700;color:#fff;margin-bottom:12px;display:block;}
+.footer-brand .logo span{color:var(--yellow);}
+.footer-brand p{font-size:14px;color:#6B5E4A;line-height:1.8;max-width:260px;}
+.footer-socials{display:flex;gap:12px;margin-top:20px;}
+.social-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;transition:all .2s;cursor:pointer;}
+.social-btn:hover{background:var(--yellow);border-color:var(--yellow);}
+.social-btn svg{width:18px;height:18px;fill:#fff;}
+.social-btn:hover svg{fill:#1A1510;}
+
+.footer-col h4{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#4A3F32;margin-bottom:18px;}
+.footer-col ul{list-style:none;}
+.footer-col ul li{margin-bottom:12px;}
+.footer-col ul li a{font-size:14px;color:#6B5E4A;transition:color .2s;}
+.footer-col ul li a:hover{color:var(--yellow);}
+.contact-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;}
+.contact-item svg{width:16px;height:16px;fill:var(--yellow-dark);flex-shrink:0;margin-top:3px;}
+.contact-item span{font-size:14px;color:#6B5E4A;line-height:1.6;}
+.contact-item a{font-size:14px;color:#6B5E4A;transition:color .2s;}
+.contact-item a:hover{color:var(--yellow);}
+
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:12px;color:#3D3429;}
+.footer-bottom .made{font-size:12px;color:#3D3429;}
+
+/* WhatsApp float */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:transform .2s;}
+.wa-float:hover{transform:scale(1.08);}
+.wa-float svg{width:30px;height:30px;fill:#fff;}
 </style>
 </head>
 <body>
+
+<!-- WhatsApp Float Button -->
+<a class="wa-float" href="https://wa.me/923244009836" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <!-- NAV -->
 <nav>
@@ -137,26 +155,10 @@
   <h2>Most businesses in Pakistan are <em>wasting money</em> on ads.</h2>
   <p>Without the right strategy, your budget disappears with zero results. Here's what's going wrong:</p>
   <div class="problem-grid">
-    <div class="problem-card">
-      <div class="icon">🎯</div>
-      <h4>Wrong audience targeting</h4>
-      <p>Your ads are shown to people who will never buy from you.</p>
-    </div>
-    <div class="problem-card">
-      <div class="icon">💸</div>
-      <h4>Budget being wasted</h4>
-      <p>Spending daily without knowing which ads are working.</p>
-    </div>
-    <div class="problem-card">
-      <div class="icon">📉</div>
-      <h4>No clear strategy</h4>
-      <p>Random posts and boosted content that bring no real results.</p>
-    </div>
-    <div class="problem-card">
-      <div class="icon">🔍</div>
-      <h4>Invisible on Google</h4>
-      <p>Customers are searching for you — but finding your competitors.</p>
-    </div>
+    <div class="problem-card"><div class="icon">🎯</div><h4>Wrong audience targeting</h4><p>Your ads are shown to people who will never buy from you.</p></div>
+    <div class="problem-card"><div class="icon">💸</div><h4>Budget being wasted</h4><p>Spending daily without knowing which ads are working.</p></div>
+    <div class="problem-card"><div class="icon">📉</div><h4>No clear strategy</h4><p>Random posts and boosted content that bring no real results.</p></div>
+    <div class="problem-card"><div class="icon">🔍</div><h4>Invisible on Google</h4><p>Customers are searching for you — but finding your competitors.</p></div>
   </div>
 </section>
 
@@ -166,24 +168,9 @@
   <h2 class="section-title">Everything You Need to Grow Online</h2>
   <p class="section-sub">We offer three core services that work together to bring you consistent leads and sales.</p>
   <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">📘</div>
-      <h3>Meta Ads</h3>
-      <p>Facebook & Instagram ad campaigns built to convert — from awareness to sales, with precise audience targeting and compelling creatives.</p>
-      <span class="service-tag">Facebook · Instagram · Reels</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🔎</div>
-      <h3>Google Ads</h3>
-      <p>Show up when customers are actively searching. We run Search, Display & Shopping campaigns optimised for maximum return on your spend.</p>
-      <span class="service-tag">Search · Display · Shopping</span>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🚀</div>
-      <h3>SEO</h3>
-      <p>Rank higher on Google organically. We improve your website's visibility so customers find you first — without paying per click.</p>
-      <span class="service-tag">On-page · Local · Technical</span>
-    </div>
+    <div class="service-card"><div class="service-icon">📘</div><h3>Meta Ads</h3><p>Facebook & Instagram ad campaigns built to convert — from awareness to sales, with precise audience targeting and compelling creatives.</p><span class="service-tag">Facebook · Instagram · Reels</span></div>
+    <div class="service-card"><div class="service-icon">🔎</div><h3>Google Ads</h3><p>Show up when customers are actively searching. We run Search, Display & Shopping campaigns optimised for maximum return on your spend.</p><span class="service-tag">Search · Display · Shopping</span></div>
+    <div class="service-card"><div class="service-icon">🚀</div><h3>SEO</h3><p>Rank higher on Google organically. We improve your website's visibility so customers find you first — without paying per click.</p><span class="service-tag">On-page · Local · Technical</span></div>
   </div>
 </section>
 
@@ -193,21 +180,9 @@
   <h2 class="section-title">Simple. Transparent. Results-Driven.</h2>
   <p class="section-sub">We follow a clear 3-step process to get your business growing.</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h4>Free Audit</h4>
-      <p>We analyse your current ads, website & competitors to find exactly where you're losing money and opportunity.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h4>Custom Strategy</h4>
-      <p>We build a tailored growth plan — the right channels, messaging and budget allocation for your specific business.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h4>Launch & Scale</h4>
-      <p>We execute, monitor and optimise your campaigns continuously — so your results keep improving month after month.</p>
-    </div>
+    <div class="step"><div class="step-num">1</div><h4>Free Audit</h4><p>We analyse your current ads, website & competitors to find exactly where you're losing money and opportunity.</p></div>
+    <div class="step"><div class="step-num">2</div><h4>Custom Strategy</h4><p>We build a tailored growth plan — the right channels, messaging and budget allocation for your specific business.</p></div>
+    <div class="step"><div class="step-num">3</div><h4>Launch & Scale</h4><p>We execute, monitor and optimise your campaigns continuously — so your results keep improving month after month.</p></div>
   </div>
 </section>
 
@@ -217,62 +192,144 @@
   <h2 class="section-title">Built for Two Industries</h2>
   <p class="section-sub">We focus deeply on what we know best, so we can deliver results faster.</p>
   <div class="who-grid">
-    <div class="who-card">
-      <div class="big-icon">🍽️</div>
-      <h3>Restaurants & Food Brands</h3>
-      <p>More table bookings, delivery orders and brand awareness — through hyper-local targeting and mouth-watering creatives.</p>
-      <ul>
-        <li>Dine-in & delivery campaigns</li>
-        <li>Local SEO for Google Maps</li>
-        <li>Offer & event promotions</li>
-      </ul>
-    </div>
-    <div class="who-card">
-      <div class="big-icon">🛍️</div>
-      <h3>eCommerce & Retail Brands</h3>
-      <p>More website traffic, add-to-carts and sales — with data-driven ad funnels that turn browsers into buyers.</p>
-      <ul>
-        <li>Product catalogue & shopping ads</li>
-        <li>Retargeting & abandoned cart</li>
-        <li>SEO for product pages</li>
-      </ul>
-    </div>
+    <div class="who-card"><div class="big-icon">🍽️</div><h3>Restaurants & Food Brands</h3><p>More table bookings, delivery orders and brand awareness — through hyper-local targeting and mouth-watering creatives.</p><ul><li>Dine-in & delivery campaigns</li><li>Local SEO for Google Maps</li><li>Offer & event promotions</li></ul></div>
+    <div class="who-card"><div class="big-icon">🛍️</div><h3>eCommerce & Retail Brands</h3><p>More website traffic, add-to-carts and sales — with data-driven ad funnels that turn browsers into buyers.</p><ul><li>Product catalogue & shopping ads</li><li>Retargeting & abandoned cart</li><li>SEO for product pages</li></ul></div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- CTA / FORM -->
 <section class="cta-section">
   <h2>Ready to Stop Wasting Money on Ads That <span>Don't Work?</span></h2>
   <p>Book your free audit today. We'll review your business and show you exactly how to get better results.</p>
   <div class="cta-form">
     <div class="form-row">
-      <input type="text" placeholder="Your Name" />
-      <input type="text" placeholder="Business Name" />
+      <input type="text" id="f-name" placeholder="Your Name" />
+      <input type="text" id="f-biz" placeholder="Business Name" />
     </div>
     <div class="form-row">
-      <input type="tel" placeholder="WhatsApp Number" />
-      <select>
+      <input type="tel" id="f-phone" placeholder="WhatsApp Number (e.g. 03001234567)" />
+      <select id="f-type">
         <option value="" disabled selected>Your Business Type</option>
         <option>Restaurant / Food Brand</option>
         <option>eCommerce / Retail</option>
         <option>Other</option>
       </select>
     </div>
-    <button class="submit-btn" onclick="alert('Thank you! We will contact you within 24 hours on WhatsApp.')">Get My Free Audit →</button>
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">Get My Free Audit →</button>
+    <div class="form-msg" id="formMsg"></div>
     <p class="cta-note">✓ Free of charge &nbsp;·&nbsp; ✓ No obligation &nbsp;·&nbsp; ✓ Reply within 24 hours</p>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Vertax<span>.</span></div>
-  <div class="footer-links">
-    <a href="https://instagram.com/vertax_agency">Instagram</a>
-    <a href="https://facebook.com/Vertax.agency">Facebook</a>
-    <a href="https://linkedin.com/company/vertax-agency">LinkedIn</a>
+  <div class="footer-top">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <span class="logo">Vertax<span>.</span></span>
+      <p>Performance marketing agency based in Lahore, Pakistan. We help restaurants & eCommerce brands grow with Meta Ads, Google Ads & SEO.</p>
+      <div class="footer-socials">
+        <!-- Instagram -->
+        <a class="social-btn" href="https://instagram.com/vertax_agency" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a class="social-btn" href="https://www.facebook.com/profile.php?id=61575433588195" target="_blank" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.994 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a class="social-btn" href="https://linkedin.com/company/vertax-agency" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <!-- WhatsApp -->
+        <a class="social-btn" href="https://wa.me/923244009836" target="_blank" title="WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#" onclick="document.querySelector('.hero').scrollIntoView({behavior:'smooth'});return false;">Home</a></li>
+        <li><a href="#" onclick="document.querySelector('.services').scrollIntoView({behavior:'smooth'});return false;">Services</a></li>
+        <li><a href="#" onclick="document.querySelector('.how').scrollIntoView({behavior:'smooth'});return false;">How It Works</a></li>
+        <li><a href="#" onclick="document.querySelector('.who').scrollIntoView({behavior:'smooth'});return false;">Who We Help</a></li>
+        <li><a href="#" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'});return false;">Free Audit</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <a href="https://wa.me/923244009836" target="_blank"><span>+92 324-4009836</span></a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:vertaxsolution4@gmail.com"><span>vertaxsolution4@gmail.com</span></a>
+      </div>
+      <div class="contact-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span>Lahore, Pakistan</span>
+      </div>
+    </div>
   </div>
-  <div class="footer-copy">© 2025 Vertax Agency · Lahore, Pakistan</div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Vertax Agency. All rights reserved.</p>
+    <p class="made">Performance Marketing · Lahore, Pakistan</p>
+  </div>
 </footer>
 
+<script>
+function submitForm() {
+  var name = document.getElementById('f-name').value.trim();
+  var biz = document.getElementById('f-biz').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  var type = document.getElementById('f-type').value;
+  var msg = document.getElementById('formMsg');
+  var btn = document.getElementById('submitBtn');
+
+  if (!name || !biz || !phone || !type) {
+    msg.className = 'form-msg error';
+    msg.textContent = 'Please fill in all fields before submitting.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  var waMsg = encodeURIComponent(
+    'New Free Audit Request from Vertax Agency Website!\n\n' +
+    'Name: ' + name + '\n' +
+    'Business: ' + biz + '\n' +
+    'Phone: ' + phone + '\n' +
+    'Business Type: ' + type
+  );
+
+  var mailSubject = encodeURIComponent('New Free Audit Request — ' + biz);
+  var mailBody = encodeURIComponent(
+    'New Free Audit Request\n\nName: ' + name +
+    '\nBusiness: ' + biz +
+    '\nPhone: ' + phone +
+    '\nBusiness Type: ' + type
+  );
+
+  window.open('https://wa.me/923244009836?text=' + waMsg, '_blank');
+  window.open('mailto:vertaxsolution4@gmail.com?subject=' + mailSubject + '&body=' + mailBody);
+
+  msg.className = 'form-msg success';
+  msg.textContent = 'Request sent! We will contact you on WhatsApp within 24 hours.';
+  btn.textContent = 'Request Sent ✓';
+
+  document.getElementById('f-name').value = '';
+  document.getElementById('f-biz').value = '';
+  document.getElementById('f-phone').value = '';
+  document.getElementById('f-type').value = '';
+}
+</script>
 </body>
 </html>

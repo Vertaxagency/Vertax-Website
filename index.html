@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vertax Agency — Meta Ads | Google Ads | SEO</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --cream:#F5EFE6;
+    --cream2:#EDE0CC;
+    --cream3:#D9C9B0;
+    --yellow:#F5C842;
+    --yellow-dark:#C99D0A;
+    --yellow-light:#FDF3C0;
+    --black:#1A1510;
+    --dark:#2E2A22;
+    --muted:#6B5E4A;
+    --white:#FFFDF7;
+  }
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--black);line-height:1.7;}
+  a{text-decoration:none;color:inherit;}
+
+  /* NAV */
+  nav{background:var(--white);border-bottom:1px solid var(--cream2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:99;}
+  .logo{font-size:22px;font-weight:700;letter-spacing:-0.5px;color:var(--black);}
+  .logo span{color:var(--yellow-dark);}
+  .nav-cta{background:var(--yellow);color:var(--black);font-weight:600;font-size:14px;padding:9px 20px;border-radius:8px;border:none;cursor:pointer;transition:background .2s;}
+  .nav-cta:hover{background:var(--yellow-dark);color:#fff;}
+
+  /* HERO */
+  .hero{background:var(--white);padding:90px 5% 80px;text-align:center;}
+  .hero-badge{display:inline-block;background:var(--yellow-light);color:var(--yellow-dark);font-size:13px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:24px;border:1px solid #E8D070;}
+  .hero h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.15;color:var(--black);max-width:780px;margin:0 auto 20px;}
+  .hero h1 span{color:var(--yellow-dark);}
+  .hero p{font-size:18px;color:var(--muted);max-width:560px;margin:0 auto 36px;}
+  .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{background:var(--yellow);color:var(--black);font-weight:700;font-size:16px;padding:15px 32px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;}
+  .btn-primary:hover{background:var(--yellow-dark);color:#fff;transform:translateY(-1px);}
+  .btn-secondary{background:transparent;color:var(--dark);font-weight:600;font-size:16px;padding:15px 32px;border-radius:10px;border:1.5px solid var(--cream3);cursor:pointer;transition:all .2s;}
+  .btn-secondary:hover{border-color:var(--yellow-dark);color:var(--yellow-dark);}
+  .hero-sub{margin-top:28px;font-size:13px;color:var(--muted);}
+  .hero-sub span{color:var(--yellow-dark);font-weight:600;}
+
+  /* PROBLEM */
+  .problem{background:var(--dark);color:#fff;padding:70px 5%;text-align:center;}
+  .problem h2{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:16px;line-height:1.3;}
+  .problem h2 em{color:var(--yellow);font-style:normal;}
+  .problem p{font-size:17px;color:#B5A898;max-width:620px;margin:0 auto 40px;}
+  .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:800px;margin:0 auto;}
+  .problem-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px 20px;text-align:left;}
+  .problem-card .icon{font-size:22px;margin-bottom:12px;}
+  .problem-card h4{font-size:15px;font-weight:600;margin-bottom:6px;color:#fff;}
+  .problem-card p{font-size:13px;color:#8A7B6E;line-height:1.6;}
+
+  /* SERVICES */
+  .services{background:var(--cream);padding:80px 5%;text-align:center;}
+  .section-label{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--yellow-dark);text-transform:uppercase;margin-bottom:12px;}
+  .section-title{font-size:clamp(24px,3.5vw,38px);font-weight:700;margin-bottom:14px;color:var(--black);}
+  .section-sub{font-size:16px;color:var(--muted);max-width:520px;margin:0 auto 50px;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:0 auto;}
+  .service-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 24px;text-align:left;transition:all .2s;}
+  .service-card:hover{border-color:var(--yellow);transform:translateY(-3px);}
+  .service-icon{width:48px;height:48px;background:var(--yellow-light);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:22px;}
+  .service-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--black);}
+  .service-card p{font-size:14px;color:var(--muted);line-height:1.7;}
+  .service-tag{display:inline-block;margin-top:14px;font-size:12px;font-weight:600;color:var(--yellow-dark);background:var(--yellow-light);padding:4px 10px;border-radius:6px;}
+
+  /* HOW IT WORKS */
+  .how{background:var(--white);padding:80px 5%;text-align:center;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;max-width:780px;margin:0 auto;position:relative;}
+  .step{padding:24px 20px;position:relative;}
+  .step-num{width:44px;height:44px;background:var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin:0 auto 16px;color:var(--black);}
+  .step h4{font-size:16px;font-weight:700;margin-bottom:8px;color:var(--black);}
+  .step p{font-size:14px;color:var(--muted);}
+  .step-line{display:none;}
+
+  /* WHO WE HELP */
+  .who{background:var(--cream);padding:80px 5%;text-align:center;}
+  .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:780px;margin:0 auto;}
+  .who-card{background:var(--white);border:1px solid var(--cream2);border-radius:14px;padding:32px 28px;text-align:left;}
+  .who-card .big-icon{font-size:36px;margin-bottom:16px;}
+  .who-card h3{font-size:20px;font-weight:700;margin-bottom:10px;color:var(--black);}
+  .who-card p{font-size:14px;color:var(--muted);line-height:1.7;}
+  .who-card ul{margin-top:14px;padding-left:18px;}
+  .who-card ul li{font-size:14px;color:var(--muted);margin-bottom:6px;}
+
+  /* CTA SECTION */
+  .cta-section{background:var(--dark);padding:90px 5%;text-align:center;position:relative;overflow:hidden;}
+  .cta-section::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:var(--yellow);opacity:0.06;border-radius:50%;}
+  .cta-section h2{font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;max-width:620px;margin:0 auto 16px;line-height:1.2;}
+  .cta-section h2 span{color:var(--yellow);}
+  .cta-section p{font-size:17px;color:#9A8C7E;max-width:500px;margin:0 auto 36px;}
+  .cta-form{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px 32px;max-width:500px;margin:0 auto;}
+  .form-row{display:flex;flex-direction:column;gap:14px;margin-bottom:14px;}
+  .form-row input,.form-row select{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:13px 16px;color:#fff;font-size:15px;outline:none;transition:border .2s;}
+  .form-row input::placeholder{color:#7A6E65;}
+  .form-row input:focus,.form-row select:focus{border-color:var(--yellow);}
+  .form-row select{color:#7A6E65;}
+  .form-row select option{background:#2E2A22;color:#fff;}
+  .submit-btn{width:100%;background:var(--yellow);color:var(--black);font-weight:700;font-size:17px;padding:16px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;margin-top:6px;}
+  .submit-btn:hover{background:#FFD700;transform:translateY(-1px);}
+  .cta-note{margin-top:14px;font-size:13px;color:#7A6E65;}
+
+  /* FOOTER */
+  footer{background:#111009;color:#6B5E4A;padding:36px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;gap:16px;}
+  .footer-logo{font-size:18px;font-weight:700;color:#fff;}
+  .footer-logo span{color:var(--yellow);}
+  .footer-links{display:flex;gap:20px;font-size:13px;}
+  .footer-links a{color:#6B5E4A;transition:color .2s;}
+  .footer-links a:hover{color:var(--yellow);}
+  .footer-copy{font-size:12px;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Vertax<span>.</span></div>
+  <button class="nav-cta" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Get Free Audit</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🇵🇰 Serving Businesses Across Pakistan</div>
+  <h1>Grow Your Business With <span>Ads That Actually Work</span></h1>
+  <p>We help restaurants & eCommerce brands in Pakistan get more leads, traffic & sales — through Meta Ads, Google Ads, and SEO.</p>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Book a Free Audit →</button>
+    <button class="btn-secondary" onclick="document.querySelector('.services').scrollIntoView({behavior:'smooth'})">See Our Services</button>
+  </div>
+  <p class="hero-sub">100% free audit — no commitment. <span>Limited spots available.</span></p>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <h2>Most businesses in Pakistan are <em>wasting money</em> on ads.</h2>
+  <p>Without the right strategy, your budget disappears with zero results. Here's what's going wrong:</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="icon">🎯</div>
+      <h4>Wrong audience targeting</h4>
+      <p>Your ads are shown to people who will never buy from you.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">💸</div>
+      <h4>Budget being wasted</h4>
+      <p>Spending daily without knowing which ads are working.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">📉</div>
+      <h4>No clear strategy</h4>
+      <p>Random posts and boosted content that bring no real results.</p>
+    </div>
+    <div class="problem-card">
+      <div class="icon">🔍</div>
+      <h4>Invisible on Google</h4>
+      <p>Customers are searching for you — but finding your competitors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Everything You Need to Grow Online</h2>
+  <p class="section-sub">We offer three core services that work together to bring you consistent leads and sales.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📘</div>
+      <h3>Meta Ads</h3>
+      <p>Facebook & Instagram ad campaigns built to convert — from awareness to sales, with precise audience targeting and compelling creatives.</p>
+      <span class="service-tag">Facebook · Instagram · Reels</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔎</div>
+      <h3>Google Ads</h3>
+      <p>Show up when customers are actively searching. We run Search, Display & Shopping campaigns optimised for maximum return on your spend.</p>
+      <span class="service-tag">Search · Display · Shopping</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚀</div>
+      <h3>SEO</h3>
+      <p>Rank higher on Google organically. We improve your website's visibility so customers find you first — without paying per click.</p>
+      <span class="service-tag">On-page · Local · Technical</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-label">The Process</div>
+  <h2 class="section-title">Simple. Transparent. Results-Driven.</h2>
+  <p class="section-sub">We follow a clear 3-step process to get your business growing.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Free Audit</h4>
+      <p>We analyse your current ads, website & competitors to find exactly where you're losing money and opportunity.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Custom Strategy</h4>
+      <p>We build a tailored growth plan — the right channels, messaging and budget allocation for your specific business.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Launch & Scale</h4>
+      <p>We execute, monitor and optimise your campaigns continuously — so your results keep improving month after month.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE HELP -->
+<section class="who">
+  <div class="section-label">Who We Help</div>
+  <h2 class="section-title">Built for Two Industries</h2>
+  <p class="section-sub">We focus deeply on what we know best, so we can deliver results faster.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="big-icon">🍽️</div>
+      <h3>Restaurants & Food Brands</h3>
+      <p>More table bookings, delivery orders and brand awareness — through hyper-local targeting and mouth-watering creatives.</p>
+      <ul>
+        <li>Dine-in & delivery campaigns</li>
+        <li>Local SEO for Google Maps</li>
+        <li>Offer & event promotions</li>
+      </ul>
+    </div>
+    <div class="who-card">
+      <div class="big-icon">🛍️</div>
+      <h3>eCommerce & Retail Brands</h3>
+      <p>More website traffic, add-to-carts and sales — with data-driven ad funnels that turn browsers into buyers.</p>
+      <ul>
+        <li>Product catalogue & shopping ads</li>
+        <li>Retargeting & abandoned cart</li>
+        <li>SEO for product pages</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Stop Wasting Money on Ads That <span>Don't Work?</span></h2>
+  <p>Book your free audit today. We'll review your business and show you exactly how to get better results.</p>
+  <div class="cta-form">
+    <div class="form-row">
+      <input type="text" placeholder="Your Name" />
+      <input type="text" placeholder="Business Name" />
+    </div>
+    <div class="form-row">
+      <input type="tel" placeholder="WhatsApp Number" />
+      <select>
+        <option value="" disabled selected>Your Business Type</option>
+        <option>Restaurant / Food Brand</option>
+        <option>eCommerce / Retail</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <button class="submit-btn" onclick="alert('Thank you! We will contact you within 24 hours on WhatsApp.')">Get My Free Audit →</button>
+    <p class="cta-note">✓ Free of charge &nbsp;·&nbsp; ✓ No obligation &nbsp;·&nbsp; ✓ Reply within 24 hours</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Vertax<span>.</span></div>
+  <div class="footer-links">
+    <a href="https://instagram.com/vertax_agency">Instagram</a>
+    <a href="https://facebook.com/Vertax.agency">Facebook</a>
+    <a href="https://linkedin.com/company/vertax-agency">LinkedIn</a>
+  </div>
+  <div class="footer-copy">© 2025 Vertax Agency · Lahore, Pakistan</div>
+</footer>
+
+</body>
+</html>

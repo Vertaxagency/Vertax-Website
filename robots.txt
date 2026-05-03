@@ -1,0 +1,12 @@
+# Vertax Agency — robots.txt
+# https://vertaxagency.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://vertaxagency.com/sitemap.xml
+
+# Disallow admin/private paths (add as needed)
+Disallow: /wp-admin/
+Disallow: /wp-includes/

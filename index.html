@@ -23,6 +23,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Vertax Agency — Meta Ads | Google Ads | SEO | Lahore, Pakistan</title>
 <meta name="description" content="Vertax Agency is a performance marketing agency in Lahore, Pakistan. We help restaurants and eCommerce brands grow with Meta Ads, Google Ads, and SEO. Book a free audit today."/>
 <meta name="robots" content="index, follow"/>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://vertaxagency.com/sitemap.xml"/>
 <link rel="canonical" href="https://vertaxagency.com/"/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text y='.9em' font-size='72' x='12' fill='%23FFD000' font-family='serif' font-weight='900'>V</text></svg>"/>
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text y='.9em' font-size='72' x='12' fill='%23FFD000' font-family='serif' font-weight='900'>V</text></svg>"/>
@@ -42,30 +43,134 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:description" content="Performance marketing agency in Lahore, Pakistan. Meta Ads, Google Ads & SEO for restaurants and eCommerce brands."/>
 <meta name="twitter:image" content="https://vertaxagency.com/og-image.jpg"/>
 
-<!-- ✅ Schema.org -->
+<!-- ✅ Schema.org - LocalBusiness (fixes hcard/Microformat case warning) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MarketingAgency",
+  "@type": "ProfessionalService",
   "name": "Vertax Agency",
   "url": "https://vertaxagency.com",
-  "logo": "https://vertaxagency.com/logo.png",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://vertaxagency.com/logo.png"
+  },
+  "image": "https://vertaxagency.com/og-image.jpg",
   "description": "Performance marketing agency in Lahore, Pakistan offering Meta Ads, Google Ads and SEO for restaurants and eCommerce brands.",
   "telephone": "+923243009836",
   "email": "vertaxsolution4@gmail.com",
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Ali",
+    "jobTitle": "Founder"
+  },
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Lahore",
     "addressLocality": "Lahore",
     "addressRegion": "Punjab",
+    "postalCode": "54000",
     "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "31.5204",
+    "longitude": "74.3587"
+  },
+  "openingHours": "Mo-Sa 09:00-20:00",
+  "priceRange": "PKR 25,000 - PKR 75,000",
+  "currenciesAccepted": "PKR",
+  "paymentAccepted": "Bank Transfer, JazzCash, EasyPaisa",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Pakistan"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Meta Ads Management",
+          "description": "Facebook and Instagram advertising campaign management including strategy, creative, targeting and optimization."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Google Ads Management",
+          "description": "Google Search, Display and Shopping campaign management for Pakistani businesses."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO - Search Engine Optimization",
+          "description": "On-page SEO, technical SEO, local SEO and content strategy to rank higher on Google."
+        }
+      }
+    ]
   },
   "sameAs": [
     "https://instagram.com/vertax_agency",
     "https://www.facebook.com/profile.php?id=61575433588195",
-    "https://linkedin.com/company/vertax-agency"
-  ],
-  "areaServed": "Pakistan",
-  "serviceType": ["Meta Ads", "Google Ads", "SEO"]
+    "https://linkedin.com/company/vertax-agency",
+    "https://wa.me/923243009836"
+  ]
+}
+</script>
+
+<!-- ✅ FAQ Schema - boosts text/HTML ratio + rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does Meta Ads management cost in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vertax Agency offers Meta Ads management starting from PKR 25,000 per month agency fee. The ad budget (PKR 15,000 to 30,000 per month) is paid directly to Meta and is separate from our fee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results from Meta Ads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most clients start seeing measurable results within 2 to 4 weeks of launching campaigns. The first week is setup and strategy, the second week campaigns go live, and by weeks 3 and 4 we begin optimization and scaling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a free audit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Vertax Agency offers a completely free Meta Ads audit with no obligation. We review your current ad account, identify what is wasting your budget, and give you actionable recommendations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which businesses do you work with in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in two niches: restaurants and food brands, and eCommerce and retail brands across Pakistan. We also work with clothing brands, clinics, coaches and service-based businesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good ROAS for eCommerce in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Pakistani eCommerce brands, a ROAS of 3x to 5x is considered good, while 6x and above is excellent. Below 2x typically means the campaign strategy or targeting needs improvement."
+      }
+    }
+  ]
 }
 </script>
 
@@ -307,6 +412,16 @@ footer{background:#070707;border-top:1px solid var(--gray3);padding:64px 40px 28
 .ft-bdgs{display:flex;gap:9px;}
 .ftbdg{font-size:11px;color:var(--dim);border:1px solid var(--gray3);padding:3px 10px;}
 
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--gray3);overflow:hidden;}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:22px 0;cursor:pointer;font-size:16px;font-weight:600;gap:20px;transition:color .2s;}
+.faq-q:hover{color:var(--yellow);}
+.faq-arrow{font-size:22px;color:var(--yellow);flex-shrink:0;transition:transform .3s;line-height:1;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.faq-a.open{max-height:300px;}
+.faq-a p{font-size:14px;color:var(--muted);line-height:1.8;padding-bottom:20px;}
+
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s;}
 .wa-float:hover{transform:scale(1.1);}
@@ -516,6 +631,41 @@ footer{background:#070707;border-top:1px solid var(--gray3);padding:64px 40px 28
   </div>
 </section>
 
+<!-- FAQ SECTION -->
+<section id="faq" style="background:var(--black);">
+  <div class="inner">
+    <div class="stag tc">FAQ</div>
+    <h2 class="stitle tc">QUESTIONS WE GET<br>ALL THE TIME.</h2>
+    <p class="ssub tc" style="margin:0 auto 56px;">Straight answers. No fluff.</p>
+    <div style="max-width:860px;margin:0 auto;border-top:1px solid var(--gray3);">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How much does Meta Ads management cost in Pakistan?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>Vertax Agency offers Meta Ads management starting from PKR 25,000 per month agency fee. The ad budget — typically PKR 15,000 to 30,000 per month — is paid directly by you to Meta and is completely separate from our management fee. Your full ad spend goes to running your campaigns, not to us.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>How long does it take to see results from Meta Ads?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>Most clients start seeing measurable results within 2 to 4 weeks of launch. Week 1 is onboarding and strategy. Week 2 campaigns go live. By Weeks 3 and 4 we optimize and scale based on real data. We set realistic expectations from day one — no false promises, ever.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you offer a free audit? What does it include?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>Yes — completely free, no obligation. We review your current ad account or marketing setup, identify exactly where your budget is being wasted, and give you specific actionable recommendations you can use immediately. Even if you decide not to work with us, you leave with real value.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What is a good ROAS for eCommerce in Pakistan?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>For Pakistani eCommerce brands running Meta Ads, a ROAS of 3x to 5x is solid. 6x and above is excellent. Below 2x means strategy, targeting, or creative needs to be fixed. The benchmark also varies by industry — clothing, electronics, and food delivery all have different realistic targets.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>Do you work with businesses outside Lahore?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>Yes. We work with businesses across Pakistan — Karachi, Islamabad, Rawalpindi, Faisalabad, and beyond. Everything is handled via WhatsApp and email with full transparency. You get weekly updates and a detailed monthly report no matter where you are in Pakistan.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)"><span>What makes Vertax different from other digital agencies?</span><span class="faq-arrow">+</span></div>
+        <div class="faq-a"><p>Three things. You talk directly to Ali — the person actually managing your account. We focus only on restaurants and eCommerce so we know your market deeply. And we never make fake guarantees or promise specific numbers. We promise real strategy, complete honesty, and maximum effort on every account we take on.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BAND -->
 <div class="cta-band">
   <div class="cta-in">
@@ -670,6 +820,22 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
     txt.textContent='Send My Free Audit Request →';
   }
 });
+
+function toggleFaq(el){
+  var arrow=el.querySelector('.faq-arrow');
+  var ans=el.nextElementSibling;
+  var isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(function(a){
+    a.classList.remove('open');
+    a.previousElementSibling.querySelector('.faq-arrow').textContent='+';
+    a.previousElementSibling.querySelector('.faq-arrow').style.transform='rotate(0deg)';
+  });
+  if(!isOpen){
+    ans.classList.add('open');
+    arrow.textContent='×';
+    arrow.style.transform='rotate(0deg)';
+  }
+}
 </script>
 </body>
 </html>

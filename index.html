@@ -43,11 +43,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:description" content="Performance marketing agency in Lahore, Pakistan. Meta Ads, Google Ads & SEO for restaurants and eCommerce brands."/>
 <meta name="twitter:image" content="https://vertaxagency.com/og-image.jpg"/>
 
-<!-- ✅ Schema.org - LocalBusiness (fixes hcard/Microformat case warning) -->
+<!-- ✅ Schema.org Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "name": "Vertax Agency",
   "url": "https://vertaxagency.com",
   "logo": {
@@ -62,7 +62,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "founder": {
     "@type": "Person",
     "name": "Ali",
-    "jobTitle": "Founder & Digital Marketing Strategist"
+    "jobTitle": "Founder"
   },
   "address": {
     "@type": "PostalAddress",
@@ -231,8 +231,8 @@ nav{max-width:1260px;margin:0 auto;padding:0 40px;height:70px;display:flex;align
 .t-av:first-child{margin-left:0;}
 
 /* HERO CARD */
-.hcard{background:var(--gray);border:1px solid var(--gray3);padding:32px;position:relative;}
-.hcard::before{content:'';position:absolute;top:-1px;left:-1px;width:56px;height:3px;background:var(--yellow);}
+.hero-metrics-card{background:var(--gray);border:1px solid var(--gray3);padding:32px;position:relative;}
+.hero-metrics-card::before{content:'';position:absolute;top:-1px;left:-1px;width:56px;height:3px;background:var(--yellow);}
 .hc-lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--yellow);font-weight:600;margin-bottom:20px;display:flex;align-items:center;gap:8px;}
 .hc-lbl::before{content:'';width:6px;height:6px;background:var(--yellow);border-radius:50%;animation:blink 1.5s infinite;}
 .hc-mets{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--gray3);}
@@ -441,7 +441,7 @@ footer{background:#070707;border-top:1px solid var(--gray3);padding:64px 40px 28
   footer{padding:48px 22px 22px;}
   .hero{padding:90px 22px 52px;}
   .hero-inner{grid-template-columns:1fr;gap:0;}
-  .hcard{display:none;}
+  .hero-metrics-card{display:none;}
   .srv-grid,.proc-grid{grid-template-columns:1fr;}
   .who-grid,.why-grid,.c-grid,.price-grid{grid-template-columns:1fr;}
   .why-stats{grid-template-columns:1fr 1fr;}
@@ -511,7 +511,7 @@ footer{background:#070707;border-top:1px solid var(--gray3);padding:64px 40px 28
       </div>
     </div>
     <div>
-      <div class="hcard">
+      <div class="hero-metrics-card">
         <div class="hc-lbl">Live Campaign Performance</div>
         <div class="hc-mets">
           <div class="hc-met"><div class="hc-val">3.8X</div><div class="hc-d">Average ROAS</div></div>
